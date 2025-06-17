@@ -61,3 +61,54 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Express.js Documentation](https://expressjs.com/)
 - [RESTful API Design Best Practices](https://restfulapi.net/)
 - [HTTP Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 
+
+
+# Express.js Product API
+
+## 📦 Features
+- Full CRUD for `/api/products`
+- Middleware: logger, authentication, error handling
+- Advanced: filtering, pagination, search, stats
+
+## 🚀 Getting Started
+
+1. Install dependencies:
+```bash
+npm install express body-parser uuid
+```
+
+2. Start the server:
+```bash
+node server.js
+```
+
+3. Use Postman or curl:
+```bash
+curl -H "x-api-key: 123456" http://localhost:3000/api/products
+```
+
+## 🔐 Authentication
+
+Send header:
+```
+x-api-key: 123456
+```
+
+## 📚 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/products | List products (support search, filter, pagination) |
+| GET | /api/products/:id | Get product by ID |
+| POST | /api/products | Add new product |
+| PUT | /api/products/:id | Update a product |
+| DELETE | /api/products/:id | Delete a product |
+| GET | /api/products/stats | Get stats by category |
+
+## 📁 .env.example
+
+```
+PORT=3000
+API_KEY=123456
+```
+
